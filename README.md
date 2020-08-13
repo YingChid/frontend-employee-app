@@ -13,7 +13,6 @@ ng serve
 or
 npm run start
 ```
-run `http://localhost:4200`
 
 # FrontendEmployeeApp Running With Docker
 
@@ -21,4 +20,7 @@ run `http://localhost:4200`
  docker-compose up
 ```
 
-Open `http://localhost:4200`
+# Open 
+```
+http://localhost:4200
+```
