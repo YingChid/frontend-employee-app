@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+html,
+body {
+    height: 100%;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+input {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+}
+
+.form-control {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+}
+
+.input-error {
+    border-color: red !important;
+}
+
+.invalid {
+    color: red;
+}
+
+select:invalid {
+    color: #C2D1D9;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #C2D1D9 !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #C2D1D9 !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #C2D1D9 !important;
+}
+
+.col {
+    margin: 5px 0px;
+}
+
+.space10 {
+    height: 10px;
+}
+
+.space20 {
+    height: 20px;
+}
+
+.space30 {
+    height: 30px;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.new-user-dialog .mat-dialog-container {
+    padding: 0;
+}
+
+
+/* You can add global styles to this file, and also import other style files */
+
+.padding-left-0 {
+    padding-left: 0px !important;
+}
+
+.main-topic-text p {
+    margin-bottom: 0px;
+}
+
+.sub-topic-text p {
+    margin-bottom: 0px;
+}
+
+.ck-content p {
+    margin-bottom: 0px;
+}
+
+.ck.ck-editor__editable_inline {
+    min-height: 300px;
+}/* You can add global styles to this file, and also import other style files */
