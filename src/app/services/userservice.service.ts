@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 })
 export class UserserviceService {
 
-  private actionUrl = 'api/users/';
+  private actionUrl = 'https://dummy-api.cm.edu/';
   // tslint:disable-next-line:ban-types
   public currentUserSubject: BehaviorSubject<Object>;
   // tslint:disable-next-line:ban-types
@@ -20,6 +20,22 @@ export class UserserviceService {
   }
 
   public login<T>(data: object): Observable<T> {
-    return this.http.post<T>(this.actionUrl + 'authenticate', data);
+    return this.http.post<T>(this.actionUrl , data);
+  }
+
+  public getEmployee<T>(): Observable<T> {
+    return this.http.get<T>(this.actionUrl + "employees")
+  }
+
+  public postEmployee<T>(data: object): Observable<T> {
+    return this.http.post<T>(this.actionUrl + "employees" , data);
+  }
+
+  public putEmployee<T>(id: String, data: Object): Observable<T> {
+    return this.http.put<T>(this.actionUrl + "employees/" + id, data);
+  }
+
+  public daleteEmployee<T>(id: String): Observable<T> {
+    return this.http.delete<T>(this.actionUrl + "employees/" + id);
   }
 }

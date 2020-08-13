@@ -31,16 +31,7 @@ export class LoginComponent implements OnInit {
 
   submit() {
     if (this.myForm.valid) {
-      // this.userService.login(this.myForm.value.Email, this.myForm.value.Password).subscribe((res: any) => {
-      //   if( !res.errors ) {
-      //     localStorage.setItem('jwt', res.data.tokenAuth.token);
-      //     this.userService.getCurrentUser().valueChanges.subscribe((result: any) =>  {
-      //       localStorage.setItem('currentUser', JSON.stringify(result.data.user));
-      //       this.userService.currentUserSubject.next(result.data.user);
-      //       this.router.navigateByUrl('dashboard');
-      //     });
-      //   }
-      // });
+      this.router.navigateByUrl('list');
     }
   }
 

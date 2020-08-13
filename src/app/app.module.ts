@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClientXsrfModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 
+import { LoadingScreenInterceptor } from './interceptors/loading.interceptor';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -20,7 +21,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ UserserviceService ],
+  providers: [ {
+    provide: HTTP_INTERCEPTORS,
+    useClass: LoadingScreenInterceptor,
+    multi: true
+  },UserserviceService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

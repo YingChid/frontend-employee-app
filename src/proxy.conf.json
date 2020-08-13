@@ -1,0 +1,8 @@
+{
+    "/*": {
+        "target": "https://dummy-api.cm.edu/",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug"
+    }
+}
