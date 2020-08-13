@@ -27,6 +27,10 @@ export class UserserviceService {
     return this.http.get<T>(this.actionUrl + "employees")
   }
 
+  public getEmployeeById<T>(id: String): Observable<T> {
+    return this.http.get<T>(this.actionUrl + "employees/" + id)
+  }
+
   public postEmployee<T>(data: object): Observable<T> {
     return this.http.post<T>(this.actionUrl + "employees" , data);
   }

@@ -1,0 +1,39 @@
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <form [formGroup]="myForm" class="col-md-12" (submit)="submit()" #ngForm="ngForm" >
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputEmail4">Firstname</label>
+                <input type="email" class="form-control" formControlName="firstname">
+                <div *ngIf="ngForm.submitted && myForm.controls.firstname.errors">
+                  <small class="text-danger" *ngIf="myForm.controls.firstname.errors.required">Firstname is required</small>
+                </div>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Lastname</label>
+                <input type="text" class="form-control" formControlName="lastname">
+                <div *ngIf="ngForm.submitted && myForm.controls.lastname.errors">
+                  <small class="text-danger" *ngIf="myForm.controls.lastname.errors.required">Lastname is required</small>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">BirthDay</label>
+              <input type="text" class="form-control" formControlName="birthday" placeholder="1964-07-26">
+              <div *ngIf="ngForm.submitted && myForm.controls.birthday.errors">
+                <small class="text-danger" *ngIf="myForm.controls.birthday.errors.required">Birthday is required</small>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" formControlName="email" placeholder="example@test.com">
+              <div *ngIf="ngForm.submitted && myForm.controls.email.errors">
+                <small class="text-danger" *ngIf="myForm.controls.email.errors.required">Email is required</small>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+    </div>
+</div>
