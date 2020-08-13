@@ -39,11 +39,15 @@ export class ListComponent implements OnInit {
   }
 
   delete(id) {
-    this.userService.daleteEmployee(id).subscribe((res: any) => {
-      if ( res ) {
-        this.get()
-      }
-    });
+    var del = confirm("Are you sure you want to delete this record?");
+    if (del == true){
+      this.userService.daleteEmployee(id).subscribe((res: any) => {
+        if ( res ) {
+          this.get()
+        }
+      });
+    }
+    
   }
 
 }
